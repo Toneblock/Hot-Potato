@@ -1,6 +1,22 @@
 --feel free to rewrite anything in this file causing issues (like UI stuff)
 --i (cg) hacked it together from the wheel and plinko stuff
 
+-- Takes in the card and if it's being checked to be a mother (true) or father (false)
+HotPotato.can_breed = function(card, is_mother)
+    if card.ability.hpot_unbreedable ~= nil then
+        if type(card.ability.hpot_unbreedable) == "table" then
+            if is_mother then return not card.ability.hpot_unbreedable.mother else return not card.ability.hpot_unbreedable.father end
+        end
+        return not card.ability.hpot_unbreedable
+    end
+    if card.config.center.hpot_unbreedable then
+        if type(card.config.center.hpot_unbreedable) == "table" then
+            if is_mother then return not card.config.center.hpot_unbreedable.mother else return not card.config.center.hpot_unbreedable.father end
+        end
+        return not card.config.center.hpot_unbreedable
+    end
+    return true
+end
 
 SMODS.Atlas {
     key = "nursery_sign",
