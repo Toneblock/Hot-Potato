@@ -989,7 +989,8 @@ return {
                 name = "TV Slop",
                 text = {
                     "{C:white,X:red}X#1#{} Mult",
-                    "Eaten when an ad is closed"
+                    "{C:attention}Eaten{} when an",
+                    "{C:hpot_advert}Ad{} is closed"
                 }
             },
             j_hpot_jade = {
@@ -1264,35 +1265,40 @@ return {
             j_hpot_grand_finale = {
                 name = "Grand Finale",
                 text = {
-                    "A {C:attention}bizarre{} object, associated with {C:dark_edition}plastic{}.",
+                    "A {C:attention}bizarre{} object,",
+                    "associated with {C:dark_edition}plastic{}.",
                     "{C:inactive}({C:attention}+#1#{C:inactive} Joker slots)"
                 }
             },
             j_hpot_grand_diagonal = {
                 name = "Grand Diagonal",
                 text = {
-                    "A {C:attention}bizarre{} object, associated with {C:dark_edition}metal{}.",
+                    "A {C:attention}bizarre{} object,",
+                    "associated with {C:dark_edition}metal{}.",
                     "{C:inactive}({C:attention}+#1#{C:inactive} consumable slots)"
                 }
             },
             j_hpot_grand_spectral = {
                 name = "Grand Spectral",
                 text = {
-                    "A {C:attention}bizarre{} object, associated with {C:dark_edition}smoke{}.",
+                    "A {C:attention}bizarre{} object,",
+                    "associated with {C:dark_edition}smoke{}.",
                     "{C:inactive}(Turns all tarots in shop to {C:attention}Spectral{C:inactive} Cards)"
                 }
             },
             j_hpot_grand_brachial = {
                 name = "Grand Brachial",
                 text = {
-                    "A {C:attention}bizarre{} object, associated with {C:dark_edition}meat{}.",
+                    "A {C:attention}bizarre{} object,",
+                    "associated with {C:dark_edition}meat{}.",
                     "{C:inactive}(Copy both the leftmost and rightmost Jokers.)"
                 }
             },
             j_hpot_grand_chocolatier = {
                 name = "Grand Chocolatier",
                 text = {
-                    "A {C:attention}bizarre{} object, associated with {C:dark_edition}sugar{}.",
+                    "A {C:attention}bizarre{} object,",
+                    "associated with {C:dark_edition}sugar{}.",
                     "{C:inactive}({C:white,X:mult}X#1#{C:inactive} Mult)"
                 }
             },
@@ -1416,14 +1422,14 @@ return {
                 name = "Credits EX",
                 text = {
                     { "{X:mult,C:white}X#1#{} Mult" },
-                    { "{C:purple}+c.#2#{} for each hand played this round" }
+                    { "{C:purple}+c.#2#{} for each hand", "played this round" }
                 }
             },
             j_hpot_credits_ex_budget = {
                 name = "Budgets EX",
                 text = {
                     { "{X:mult,C:white}X#1#{} Mult" },
-                    { "{C:attention}+e.#2#{} for each hand played this round" }
+                    { "{C:attention}+e.#2#{} for each hand", "played this round" }
                 }
             },
             j_hpot_jankman = {
@@ -1438,13 +1444,15 @@ return {
                 name = "Aurae Joker",
                 text = {
                     "At the {C:attention}end of shop{},",
-                    "replace all consumables with {V:1}Aura Cards{}"
+                    "replace all consumables",
+                    "with {V:1}Aura Cards{}"
                 }
             },
             j_hpot_sunset = {
                 name = "Sunset",
                 text = {
-                    "If played hand contains a card with {C:attention}#1#{} suit,",
+                    "If played hand contains",
+                    "a card with {C:attention}#1#{} suit,",
                     "create a {C:red}Hanafuda{} card",
                     "{C:inactive}(Only works once per round, currently #2#)"
                 }
@@ -1591,7 +1599,8 @@ return {
                 name = "Folded Joker",
                 text = {
                     "{C:mult}+#1#{} Mult if hand",
-                    "contains {C:attention}#2#{} or more unscoring cards"
+                    "contains {C:attention}#2#{} or more",
+                    "unscoring cards"
                 }
             },
             j_hpot_c_sharp = {
@@ -1913,11 +1922,16 @@ return {
             j_hpot_ouroboros = {
                 name = 'Ouroboros',
                 text = {
-                    '{C:attention}Jokers{} can be obtained',
-                    '{C:attention}regardless of slots',
-                    '{C:red}Destroys{} a random Joker and',
-                    'gains {X:mult,C:white}X#1#{} Mult when slots are exceeded',
-                    '{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive} Mult)'
+                    {
+                        '{C:attention}Jokers{} can be obtained',
+                        '{C:attention}regardless of slot limit',
+                    },
+                    {
+                        '{C:red}Destroys{} a random Joker and',
+                        'gains {X:mult,C:white}X#1#{} Mult when',
+                        'the slot limit is {C:attention}exceeded',
+                        '{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive} Mult)'
+                    }
                 }
             },
             j_hpot_charlie = {
@@ -2120,7 +2134,7 @@ return {
                 }
             },
             j_hpot_99_bottles = {
-                name = '99 Bottles of Coke on the Wall',
+                name = { '99 Bottles of', 'Coke on the Wall' },
                 text = {
                     '{C:mult}+#1#{} Mult for each',
                     '{C:attention}Bottlecap{} used this run',
@@ -2146,14 +2160,16 @@ return {
             j_hpot_fun_is_infinite = {
                 name = "Fun is Infinite",
                 text = {
-                    "{C:attention}Eternal Jokers{} each give {X:mult,C:white}X#1#{} Mult",
+                    "{C:attention}Eternal Jokers{} each",
+                    "give {X:mult,C:white}X#1#{} Mult",
                 }
             },
             j_hpot_american_healthcare = {
                 name = "American Healthcare",
                 text = {
-                    "When a Joker is {C:attention}impregnated{},",
-                    "this Joker gains {X:mult,C:white}X#1#{} Mult and takes {C:money}$#3#{}",
+                    "When a Joker is {C:attention}impregnated{}",
+                    "this Joker gains {X:mult,C:white}X#1#{} Mult",
+                    "and takes {C:money}$#3#{}",
                     "{C:inactive,s:0.8}(Works once per round)",
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
@@ -2186,8 +2202,8 @@ return {
                 name = 'Numberslop',
                 text = {
                     '{C:attention}Numbered{} cards give',
-                    '{X:mult,C:white}X#1#{} Mult when scored.',
-                    '{C:red}self destructs{} if hand scores over',
+                    '{X:mult,C:white}X#1#{} Mult when scored',
+                    '{C:red}Self destructs{} if hand scores over',
                     '{C:attention}twice the blind requirement'
                 }
             },
@@ -2217,7 +2233,8 @@ return {
             j_hpot_social_credit = {
                 name = 'Social Credit',
                 text = {
-                    'Earn {C:purple}+c.#1#{} per {C:purple}#4# {X:red,C:attention}Social {X:attention,C:red}Credit{} at end of round',
+                    'Earn {C:purple}+c.#1#{} per {C:purple}#4#',
+                    '{X:red,C:attention}Social {X:attention,C:red}Credit{} at end of round',
                     '{C:inactive}Social Credit (Currently {C:red}#2#{C:inactive}) will alter',
                     '{C:inactive}depending on your performance'
                 }
@@ -2225,7 +2242,8 @@ return {
             j_hpot_social_credit_budget = {
                 name = 'Social Budget',
                 text = {
-                    'Earn {C:attention}+e.#1#{} per {C:attention}100 {X:red,C:attention}Social {X:attention,C:red}Credit{} at end of round',
+                    'Earn {C:attention}+e.#1#{} per {C:attention}100 {X:red,C:attention}Social {X:attention,C:red}Credit{}',
+                    'at end of round',
                     '{C:inactive}Social Credit (Currently {C:red}#2#{C:inactive}) will alter',
                     '{C:inactive}depending on your performance'
                 }
@@ -6609,20 +6627,20 @@ return {
         },
         CombatEventRewards = {
             generic = {
-		        "A random Common Joker (Doesn't need room)",
-		        "A random Uncommon Joker (Must have room)",
-		        "Up to 2 random Tarot cards (Must have room)",
-		        "Up to 2 random Planet cards (Must have room)",
-		        "Up to 2 random Common Bottlecaps (Must have room)",
-		        "1 random Uncommon Bottlecap (Must have room)",
-		        "1 random Cheque card (Must have room)",
-		        "Up to 2 random Hanafuda cards (Must have room)",
-		        "2 random Tags",
-		        "A Double Tag",
-		        "$4",
-		        "30 credits",
-		        "35000 Jicks",
-		        "0.5 Cryptocurrency",
+                "A random Common Joker (Doesn't need room)",
+                "A random Uncommon Joker (Must have room)",
+                "Up to 2 random Tarot cards (Must have room)",
+                "Up to 2 random Planet cards (Must have room)",
+                "Up to 2 random Common Bottlecaps (Must have room)",
+                "1 random Uncommon Bottlecap (Must have room)",
+                "1 random Cheque card (Must have room)",
+                "Up to 2 random Hanafuda cards (Must have room)",
+                "2 random Tags",
+                "A Double Tag",
+                "$4",
+                "30 credits",
+                "35000 Jicks",
+                "0.5 Cryptocurrency",
             },
         },
         EncounterEventRewards = {
