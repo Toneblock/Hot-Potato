@@ -2468,7 +2468,7 @@ return {
             v_hpot_antibodies = {
                 name = "Antibodies",
                 text = {
-                    "Jokers appear",
+                    "Each Joker appears",
                     "{C:red}at most once{}",
                     "per {C:attention}Round{}"
                 }
@@ -2476,7 +2476,7 @@ return {
             v_hpot_vaccination = {
                 name = "Vaccination",
                 text = {
-                    "Jokers appear",
+                    "Each Joker appears",
                     "{C:red}at most once{}",
                     "per {C:attention}Ante{}"
                 }
