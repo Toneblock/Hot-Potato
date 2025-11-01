@@ -278,7 +278,7 @@ function nursery()
                         G.GAME.breeding_rounds_passed = 0
                         local child_prio = G.P_CENTERS[G.GAME.child_prio]
                         local child_sec = G.P_CENTERS[G.GAME.child_sec]
-                        local card = SMODS.add_card { key = G.P_CENTERS.j_hpot_child.key, area = G.nursery_child, skip_materialize = true }
+                        local card = SMODS.create_card { key = G.P_CENTERS.j_hpot_child.key, area = G.nursery_child, skip_materialize = true }
                         local loc = localize { type = 'name', set = 'Joker', key = child_prio.key, vars = {} }
                         if not loc[1] then
                             loc = localize { type = 'name', set = 'Joker', key = "j_hpot_fallback", vars = {} }
