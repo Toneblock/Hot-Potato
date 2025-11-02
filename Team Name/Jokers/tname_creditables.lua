@@ -3,12 +3,12 @@ SMODS.Joker:take_ownership("j_joker", {
 	atlas = "teamname_shitfuck",
 	credits = 120,
 	rarity = "hpot_creditable",
-    blueprint_compat = true,
+	blueprint_compat = true,
 	cost = 0,
-    loc_vars = function(self, info_queue, card)
+	loc_vars = function(self, info_queue, card)
 		if JoyousSpring and not JoyousSpring.config.disable_tooltips and not card.fake_card and not card.debuff then
-            info_queue[#info_queue + 1] = { set = "Other", key = "joy_tooltip_revive" }
-        end
+			info_queue[#info_queue + 1] = { set = "Other", key = "joy_tooltip_revive" }
+		end
 		return { vars = {} }
 	end,
 	pools = {
@@ -120,24 +120,14 @@ SMODS.Joker({
 		return { vars = { card.ability.extra.slots } }
 	end,
 	add_to_deck = function(self, card, from_debuff)
-		G.E_MANAGER:add_event(Event({
-			func = function()
-				if G.consumeables then
-					G.consumeables.config.card_limit = G.consumeables.config.card_limit + card.ability.extra.slots
-				end
-				return true
-			end,
-		}))
+		if G.consumeables then
+			G.consumeables.config.card_limit = G.consumeables.config.card_limit + card.ability.extra.slots
+		end
 	end,
 	remove_from_deck = function(self, card, from_debuff)
-		G.E_MANAGER:add_event(Event({
-			func = function()
-				if G.consumeables then
-					G.consumeables.config.card_limit = G.consumeables.config.card_limit - card.ability.extra.slots
-				end
-				return true
-			end,
-		}))
+		if G.consumeables then
+			G.consumeables.config.card_limit = G.consumeables.config.card_limit - card.ability.extra.slots
+		end
 	end,
 	hotpot_credits = {
 		art = { "GoldenLeaf" },
@@ -286,7 +276,7 @@ SMODS.Joker({
 			and G.GAME.blind.config.blind.boss.showdown
 			and HPTN.is_shitfuck
 		then
-			check_for_unlock({type = 'get_fucked_lmao'})
+			check_for_unlock({ type = 'get_fucked_lmao' })
 			G.E_MANAGER:add_event(Event({
 				trigger = "before",
 				delay = 0.4,
