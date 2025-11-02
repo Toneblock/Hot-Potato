@@ -71,24 +71,14 @@ SMODS.Joker({
 		return { vars = { card.ability.extra.slots } }
 	end,
 	add_to_deck = function(self, card, from_debuff)
-		G.E_MANAGER:add_event(Event({
-			func = function()
-				if G.jokers then
-					G.jokers.config.card_limit = G.jokers.config.card_limit + card.ability.extra.slots
-				end
-				return true
-			end,
-		}))
+		if G.jokers then
+			G.jokers.config.card_limit = G.jokers.config.card_limit + card.ability.extra.slots
+		end
 	end,
 	remove_from_deck = function(self, card, from_debuff)
-		G.E_MANAGER:add_event(Event({
-			func = function()
-				if G.jokers then
-					G.jokers.config.card_limit = G.jokers.config.card_limit - card.ability.extra.slots
-				end
-				return true
-			end,
-		}))
+		if G.jokers then
+			G.jokers.config.card_limit = G.jokers.config.card_limit - card.ability.extra.slots
+		end
 	end,
 	hotpot_credits = {
 		art = { "GoldenLeaf" },
