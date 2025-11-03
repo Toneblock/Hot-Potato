@@ -139,6 +139,10 @@ function G.FUNCS.nursery_breed(e)
         }, mom)
         return
     end
+
+    -- Prevents removing Mother on successful breed
+    G.nursery_mother:unhighlight_all()
+
     mom.ability.mother = true
     dad.ability.father = true
     Horsechicot.breed(mom, dad)
