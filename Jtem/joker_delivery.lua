@@ -624,6 +624,7 @@ function hpot_jtem_create_special_deal_boxes(card, price_text, args)
             card.children.price.alignment.offset.y = card.ability.set == 'Booster' and 0.5 or 0.425
             G.GAME.hp_jtem_d2j_rate = G.GAME.hp_jtem_d2j_rate or { from = 1, to = 5000 }
             G.GAME.hp_jtem_p2j_rate = G.GAME.hp_jtem_p2j_rate or { from = 1, to = 32000 }
+            G.GAME.hp_jtem_b2j_rate = G.GAME.hp_jtem_b2j_rate or { from = 1, to = 117000 }
             G.GAME.hp_jtem_c2j_rate = G.GAME.hp_jtem_c2j_rate or { from = 1, to = 833 }
 
 
